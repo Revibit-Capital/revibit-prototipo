@@ -822,7 +822,15 @@
   // ---------- Acceso con contraseña compartida (barrera básica, no es seguridad real) ----------
   const GATE_HASH = "96b04d6957bbb0e75bb32736bdcfbe0ee336ea9f81c8f2d95b7a6f0f4ab93c1e";
   const GATE_KEY = "revibit-proto-acceso";
-  const local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  // Dentro de la app nativa (Capacitor) no hace falta contraseña: la app ya es privada.
+  const native = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  if (native) {
+    document.documentElement.classList.add("native");
+    // Como app se abre directamente en la cuenta (o en la pantalla de entrada si no hay sesión)
+    if (!location.hash || location.hash === "#/") history.replaceState(null, "", "#/app");
+    try { window.Capacitor.Plugins.StatusBar.setStyle({ style: "DARK" }); } catch (e) { /* plugin no disponible */ }
+  }
+  const local = native || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   const gateOk = () => { try { return localStorage.getItem(GATE_KEY) === GATE_HASH; } catch (e) { return false; } };
   async function sha256(t) {
     const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));

@@ -394,3 +394,8 @@ button, .btn, .chip, .tabbar a, .navitem { -webkit-user-select: none; user-selec
 .auth-note { color: rgba(255,255,255,.75); font-size: 13px; max-width: 460px; }
 .auth-hero .phone { margin-top: 8px; }
 @media (max-width: 900px) { .auth-hero .phone { margin: 28px auto 0; } }
+
+/* Dentro de la app nativa (Capacitor): mismos ajustes que la app instalada desde Safari */
+html.native, html.native body { overscroll-behavior-y: none; }
+html.native .demo-banner { padding-top: calc(env(safe-area-inset-top) + 4px); background: var(--navy); color: var(--sand); border-bottom: 0; font-size: 12px; }
+html.native .auth-wrap { padding-top: 24px; }
