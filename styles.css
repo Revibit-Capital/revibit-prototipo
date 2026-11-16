@@ -539,3 +539,9 @@ html.native .topbar { top: calc(env(safe-area-inset-top) + 24px); }
 /* Sin buscador: acciones a la derecha en ordenador */
 .topbar { justify-content: flex-end; }
 @media (max-width: 760px) { .topbar, html.native .topbar { justify-content: space-between; } }
+/* Zona segura del iPhone (muesca / isla). Va al final para que ninguna regla anterior la pise.
+   En el navegador normal env() vale 0 y no cambia nada; con la app instalada baja el aviso por debajo de la barra de estado. */
+.demo-banner { padding-top: calc(env(safe-area-inset-top, 0px) + 5px); padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+@media (display-mode: standalone) { .demo-banner { background: var(--navy); } }
+html.native .demo-banner { background: var(--navy); }
+.sidebar { top: calc(28px + env(safe-area-inset-top, 0px)); }
