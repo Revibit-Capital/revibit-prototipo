@@ -84,9 +84,9 @@
       photos: [["photo-1693391402893-04a7c1a11aa4", "Edificio"], ["photo-1618832515490-e181c4794a45", "Cocina en obra"], ["photo-1634586648651-f1fb9ec10d90", "Salón en obra"]],
       summary: "Vivienda de 62 m² con vistas al puerto. La ronda se completó en agosto y la obra va por la mitad.",
       updates: [
-        { date: "2026-11-04", title: "Instalación eléctrica terminada ⚡", text: "Toda la instalación nueva y revisada. Esta semana empieza la fontanería." },
+        { date: "2026-11-04", title: "Instalación eléctrica terminada", text: "Toda la instalación nueva y revisada. Esta semana empieza la fontanería." },
         { date: "2026-10-15", title: "Demolición terminada", text: "Fuera tabiques y suelos antiguos. Sin sorpresas en la estructura." },
-        { date: "2026-09-10", title: "Compra firmada ✍️", text: "Firmada ante notario. La hipoteca a favor de los inversores ya está inscrita." }
+        { date: "2026-09-10", title: "Compra firmada", text: "Firmada ante notario. La hipoteca a favor de los inversores ya está inscrita." }
       ],
       barrio: [["Precio medio reformado en la zona", "≈ 2.400 €/m²"], ["Tiempo medio de venta", "≈ 4 meses"], ["Al puerto", "4 min a pie"], ["Comprador típico", "Pareja joven"]] },
     { id: "san-anton", code: "RVB-CT-00", name: "Vivienda San Antón", zone: "San Antón", geo: C.anton, kind: "Vivienda", strategy: "Comprar, reformar y vender", step: 1,
@@ -95,7 +95,7 @@
       f: { buy: 50000, m2: 58, months: 12, rate: 0.15, salePm2: 2550 }, appraisal: 148000, soldPm2: 2550, paidOn: "2026-09-25",
       photos: [["photo-1786912091659-0814b3470e0c", "Edificio"], ["photo-1737233459465-8eaf6c7d8856", "Resultado final"]],
       summary: "Primer proyecto de ejemplo completado: vendido en 11 meses y devuelto con la rentabilidad pactada.",
-      updates: [{ date: "2026-09-25", title: "Pagado a los inversores 🎉", text: "Capital + 15 % bruto devuelto a los 74 inversores." }, { date: "2026-08-30", title: "Vivienda vendida", text: "Vendida a 2.550 €/m² a una pareja que vive en ella." }],
+      updates: [{ date: "2026-09-25", title: "Pagado a los inversores", text: "Capital + 15 % bruto devuelto a los 74 inversores." }, { date: "2026-08-30", title: "Vivienda vendida", text: "Vendida a 2.550 €/m² a una pareja que vive en ella." }],
       barrio: [["Precio medio reformado en la zona", "≈ 2.500 €/m²"], ["Tiempo medio de venta", "≈ 4 meses"], ["Al centro", "12 min a pie"], ["Comprador típico", "Pareja"]] },
     { id: "ensanche", code: "RVB-CT-06", name: "Edificio Ensanche", zone: "Ensanche", geo: C.ensanche, kind: "Edificio", strategy: "Rehabilitar el edificio completo y vender", step: 2,
       status: "soon", m2: 310, beds: 4, baths: 3, floor: "Edificio completo", lift: false, year: 1931, extraFeat: "2 viviendas + local", energy: "Por definir",
@@ -204,6 +204,7 @@
     info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>', stairs: '<path d="M3 20h5v-5h5v-5h5V5h3"/>', clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>', pin: '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
     phone: '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>', spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/>',
+    search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>', help: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17v.5"/>',
     euro: '<path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4 10h9M4 14h9"/>', tool: '<path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/>'
   };
   const ic = (n, size = 22) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
@@ -261,7 +262,7 @@
         </header>
         <div class="hero-grid">
           <div>
-            <span class="pill">Hecho en Cartagena 🏛️</span>
+            <span class="pill">Hecho en Cartagena</span>
             <h1 class="h1" style="margin-top:16px">Tu ciudad<span class="dot">.</span><br>Tu inversión<span class="dot">.</span></h1>
             <p class="lead">Participa en la rehabilitación de viviendas y edificios del centro de Cartagena. Desde 500 €, desde el móvil y sin letra pequeña.</p>
             <div class="row wrap"><a class="btn btn-brand" href="${logged ? "#/app/proyectos" : "#/entrar"}">${logged ? "Ver proyectos" : "Empieza ahora"} ${ic("arrow", 18)}</a><a class="btn btn-outline" href="#interes">Soy constructora</a></div>
@@ -306,7 +307,7 @@
       </section>
       <section class="section" id="interes">
         <div class="card" style="max-width:640px;margin:0 auto">
-          <h2 class="h2">Entra en la lista 👋</h2>
+          <h2 class="h2">Entra en la lista</h2>
           <p class="muted">Sin compromiso. Te avisamos cuando abra el primer proyecto.</p>
           <form class="stack" data-form="interest">
             <div class="field"><label for="i-name">Nombre</label><input id="i-name" name="name" required autocomplete="given-name"></div>
@@ -335,7 +336,7 @@
         <header class="pub-nav"><a class="logo" href="#/">Revibit<b>.</b></a></header>
         <div class="hero-grid">
           <div>
-            <span class="pill">Hecho en Cartagena 🏛️</span>
+            <span class="pill">Hecho en Cartagena</span>
             <h1 class="h1" style="margin-top:16px">Tu ciudad<span class="dot">.</span><br>Tu inversión<span class="dot">.</span></h1>
             <p class="lead">Entra con tu correo y te mandamos un enlace. Sin contraseñas.</p>
             <form class="auth-form" data-form="signup">
@@ -381,7 +382,7 @@
         <button class="btn btn-primary btn-block" type="submit">Calcular</button></form>`;
     if (n === 5) {
       const ok = S.user?.test === "ok";
-      body = `<div class="success-ico">${ic("check", 38)}</div><h1 class="h2" style="text-align:center">¡Listo! 🎉</h1>
+      body = `<div class="success-ico">${ic("check", 38)}</div><h1 class="h2" style="text-align:center">¡Listo!</h1>
         <p class="muted" style="text-align:center">Tu cuenta está abierta. Podrías asumir pérdidas de hasta <strong>${eur(lossCap() || 0)}</strong>.</p>
         ${ok ? "" : `<div class="notice warn">Ojo: tus respuestas dicen que este producto puede no encajar contigo. Recuerda: <strong>puedes perder lo que inviertes</strong>, en general <strong>no puedes sacarlo antes</strong> y <strong>un retraso retrasa tu cobro</strong>. Te lo recordaremos al invertir.</div>`}
         <a class="btn btn-brand btn-block" href="#/app" style="margin-top:16px">Ir a mi cuenta</a>`;
@@ -393,11 +394,20 @@
 
   // ---------- Estructura de la app ----------
   const NAV = [["inicio", "Inicio", "home"], ["proyectos", "Invertir", "grid"], ["cartera", "Cartera", "wallet"], ["perfil", "Perfil", "user"]];
+  const initials = (n) => (n || "?").trim().split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
   function shell(activeTab, content) {
     const items = (cls) => NAV.map(([k, t, i]) => `<a class="${cls}" href="#/app/${k === "inicio" ? "" : k}" ${activeTab === k ? 'aria-current="page"' : ""}>${ic(i)}<span>${t}</span></a>`).join("");
+    const ini = esc(initials(S.user?.name));
+    const unread = notifications().length > S.readNotif;
     return `<div class="app"><aside class="sidebar"><a class="logo" href="#/">Revibit<b>.</b></a><nav aria-label="App">${items("navitem")}</nav>
-      <div style="margin-top:auto" class="xs muted">Prototipo v2 · datos ficticios</div></aside>
-      <main class="main" id="main">${content}</main><nav class="tabbar" aria-label="App">${items("")}</nav></div>`;
+      <div class="side-foot"><button class="navitem" data-act="toast" data-msg="En el producto real: chat con el equipo de Revibit">${ic("help")}<span>Ayuda</span></button>
+      <div class="xs side-note">Prototipo · datos ficticios</div></div></aside>
+      <div class="main-wrap"><header class="topbar">
+        <a class="avatar m-only" href="#/app/perfil" aria-label="Perfil">${ini}</a>
+        <button class="search" data-act="go" data-to="#/app/proyectos" aria-label="Buscar proyectos">${ic("search", 18)}<span>Buscar proyectos</span><kbd class="d-only">⌘ K</kbd></button>
+        <div class="top-actions"><button class="icon-btn" data-act="notifs" aria-label="Notificaciones">${ic("bell", 19)}${unread ? '<span class="badge-dot"></span>' : ""}</button><a class="avatar d-only" href="#/app/perfil" aria-label="Perfil">${ini}</a></div>
+      </header>
+      <main class="main" id="main">${content}</main></div><nav class="tabbar" aria-label="App">${items("")}</nav></div>`;
   }
   const kycBanner = () => S.user && S.user.kyc !== "done" ? `<div class="notice warn row between wrap" style="margin-bottom:16px"><span>Te falta verificar tu identidad para invertir.</span><a class="btn btn-sm btn-primary" href="#/alta/${S.user.name ? 2 : 1}">Terminar</a></div>` : "";
 
@@ -409,40 +419,78 @@
   }
 
   // ---------- Inicio ----------
+  const hm = (d) => new Date(d).toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
+  function txText(m) {
+    const [a, ...b] = m.label.split(" · ");
+    if (!b.length) return [a, { in: "Transferencia entrante", out: "A tu cuenta bancaria" }[m.type] || ""];
+    const rest = b.join(" · "), mm = rest.match(/^(.*?)\s*\((.*)\)$/);
+    return mm ? [mm[1], a + " · " + mm[2]] : [rest, a];
+  }
+  function txRow(m) {
+    const p = PROJECTS.find((x) => m.label.includes(x.name));
+    const [t, sub] = txText(m), pos = m.amount >= 0;
+    const icon = p ? `<span class="tx-ic photo">${photo(p, 0, 120, "")}</span>` : `<span class="tx-ic ${pos ? "in" : ""}">${ic(pos ? "down" : "up", 18)}</span>`;
+    return `<div class="tx-row"><div class="tx-main">${icon}<div class="tx-txt"><div class="t">${esc(t)}</div><div class="xs muted">${esc(sub)}<span class="m-only"> · ${fdate(m.date)}</span></div></div></div>
+      <div class="tx-date d-only">${fdate(m.date)}, ${hm(m.date)}</div><div class="tx-st d-only">Completada</div>
+      <div class="tx-amt num ${pos ? "pos" : ""}">${pos ? "+" : "−"}${eur(Math.abs(m.amount), true)}</div></div>`;
+  }
+  function spark() {
+    const mv = [...S.movements].sort((a, b) => new Date(a.date) - new Date(b.date));
+    if (mv.length < 2) return "";
+    let c = 0; const pts = mv.map((m) => (c += m.amount));
+    const max = Math.max(...pts), min = Math.min(0, ...pts), W = 220, H = 64;
+    const xy = pts.map((v, i) => [Math.round((i / (pts.length - 1)) * W), Math.round(H - 4 - ((v - min) / (max - min || 1)) * (H - 8))]);
+    const d = xy.map(([x, y], i) => (i ? "L" : "M") + x + " " + y).join(" ");
+    const [lx, ly] = xy[xy.length - 1];
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="${d} L${W} ${H} L0 ${H}Z" class="area"/><path d="${d}" class="line"/><circle cx="${lx}" cy="${ly}" r="4" class="pt"/></svg>`;
+  }
   function viewHome() {
     const inv = invested(), total = S.cash + inv, acc = active().reduce((a, i) => a + accrued(i), 0);
     const earned = S.movements.filter((m) => m.type === "pay").reduce((a, m) => a + m.amount, 0) - S.investments.filter((i) => i.status === "repaid").reduce((a, i) => a + i.amount, 0);
     const next = active().map((i) => ({ i, p: P(i.pid) })).sort((a, b) => new Date(a.p.end) - new Date(b.p.end))[0];
     const open = PROJECTS.filter((p) => p.status === "open");
     const ups = notifications().filter((n) => n.title !== "Nuevo proyecto abierto").slice(0, 3);
-    const first = (S.user.name || "").split(" ")[0];
-    const unread = notifications().length > S.readNotif;
+    const mv = [...S.movements].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6);
+    const [ent, dec] = eur(total, true).replace(/\s?€/, "").split(",");
     return shell("inicio", `${kycBanner()}
-      <div class="page-head"><div><div class="small muted">Hola${first ? ", " + esc(first) : ""} 👋</div><h1 class="h2">Inicio</h1></div>
-        <button class="icon-btn" data-act="notifs" aria-label="Notificaciones">${ic("bell", 20)}${unread ? '<span class="badge-dot"></span>' : ""}</button></div>
-      <section class="balance-hero" aria-label="Resumen de tu cuenta">
-        <div class="label small">Total en Revibit</div>
-        <div class="amount num">${eur(total, true).replace(/,(\d\d)/, "<small>,$1</small>")}</div>
-        <div class="small">${eur(S.cash)} disponibles · ${eur(inv)} invertidos</div>
-        ${acc > 0 ? `<div class="accr" title="Rentabilidad devengada estimada; se cobra al vencimiento">${ic("spark", 14)} +${eur(acc, true)} generados (se cobran al final)</div>` : ""}
-        <div class="quick"><button data-act="add-funds"><span class="qi">${ic("plus")}</span>Añadir</button><button class="primary" data-act="go" data-to="#/app/proyectos"><span class="qi">${ic("grid")}</span>Invertir</button><button data-act="withdraw"><span class="qi">${ic("up")}</span>Retirar</button></div>
-      </section>
-      <div class="section-title"><h2>Para ti</h2><a class="small" href="#/app/proyectos">Ver todos</a></div>
-      <div class="hscroll">${open.map((p) => `<button class="promo" data-act="open-project" data-id="${p.id}" aria-label="${esc(p.name)}">${photo(p, 0, 600, "")}<div class="txt"><span class="pill">${p.raisedPct > 0.9 ? "🔥 Casi completo" : "Abierto"}</span><div class="big">${pct(p.rate)}</div><div class="small">anual bruto · ${p.months} meses</div><div style="font-weight:600;margin-top:6px">${esc(p.name)}</div></div></button>`).join("")}</div>
-      <div class="two-col" style="margin-top:16px">
-        <div>
-          <div class="card"><div class="row between"><div class="h3">Tus inversiones</div><a class="small" href="#/app/cartera">Ver todo</a></div>
-            ${inv ? allocBar() + active().map((i) => { const p = P(i.pid); return `<button class="list-item" style="width:100%;background:none;border-left:0;border-right:0;border-top:0;text-align:left;cursor:pointer" data-act="open-project" data-id="${p.id}"><div class="av photo">${photo(p, 0, 120, "")}</div><div class="grow"><div class="t">${esc(p.name)}</div><div class="xs muted">${STATUS[p.status][0]}${p.works ? " · obra " + p.works + " %" : ""}</div></div><div class="amt"><div class="num">${eur(i.amount)}</div><div class="xs pos">+${eur(accrued(i), true)}</div></div></button>`; }).join("")
-                  : `<div class="empty">Aún no tienes inversiones activas 🌱<br><a class="btn btn-brand btn-sm" style="margin-top:12px" href="#/app/proyectos">Explorar proyectos</a></div>`}
-          </div>
-          <div class="card"><div class="h3">Lo último de tus obras</div>
-            ${ups.length ? ups.map((u) => `<div class="list-item"><div class="av">${ic("tool", 20)}</div><div class="grow"><div class="t">${esc(u.title)}</div><div class="xs muted">${esc(u.text)} · ${fdate(u.date)}</div></div></div>`).join("") : `<p class="muted small">Cuando inviertas, verás aquí cada avance.</p>`}</div>
+      <div class="home-grid">
+        <div class="home-main">
+          <section class="bal" aria-label="Saldo">
+            <div class="bal-l"><div class="bal-amt num">${ent}<small>,${dec}</small> €</div>
+              <div class="bal-sub">Total · EUR<span class="d-only"> · ${eur(S.cash)} disponibles · ${eur(inv)} invertidos</span></div></div>
+            <div class="bal-actions">
+              <button class="pa" data-act="add-funds"><span class="pi">${ic("plus", 18)}</span><span>Añadir</span></button>
+              <button class="pa primary" data-act="go" data-to="#/app/proyectos"><span class="pi">${ic("grid", 18)}</span><span>Invertir</span></button>
+              <button class="pa" data-act="withdraw"><span class="pi">${ic("up", 18)}</span><span>Retirar</span></button>
+              <button class="pa" data-act="see-moves"><span class="pi">${ic("doc", 18)}</span><span>Extracto</span></button>
+            </div>
+          </section>
+          <div class="m-only bal-split"><div><span class="xs muted">Disponible</span><b class="num">${eur(S.cash, true)}</b></div><div><span class="xs muted">Invertido</span><b class="num">${eur(inv, true)}</b></div></div>
+          <section class="panel tx" aria-label="Últimos movimientos">
+            <div class="tx-head d-only"><span>Movimiento</span><span>Fecha</span><span>Estado</span><span>Importe</span></div>
+            ${mv.length ? mv.map(txRow).join("") : `<div class="empty">Todavía no hay movimientos.</div>`}
+            <button class="tx-more" data-act="see-moves">Ver todo</button>
+          </section>
+          <section class="panel" aria-label="Avances de obra"><div class="panel-h"><h2>Avances de obra</h2></div>
+            ${ups.length ? ups.map((u) => `<div class="tx-row simple"><div class="tx-main"><span class="tx-ic">${ic("tool", 18)}</span><div class="tx-txt"><div class="t">${esc(u.title)}</div><div class="xs muted">${esc(u.text)}</div></div></div><div class="xs muted">${fdate(u.date)}</div></div>`).join("") : `<p class="muted small">Cuando participes en un proyecto, verás aquí cada avance.</p>`}
+          </section>
         </div>
-        <div>
-          ${next ? `<div class="card"><div class="xs muted">Próximo cobro previsto</div><div class="h3" style="margin:4px 0">${fdate(next.p.end)}</div><div class="small muted">${esc(next.p.name)}</div><div class="kv"><span>Recibirás (neto)</span><strong class="num">${eur(next.i.amount + ret(next.i.amount, next.p).net, true)}</strong></div></div>` : ""}
-          ${earned > 0 ? `<div class="card"><div class="xs muted">Ya has cobrado</div><div class="h3 pos" style="margin:4px 0">+${eur(earned, true)}</div><div class="small muted">netos, de proyectos completados</div></div>` : ""}
-          <div class="card"><div class="row" style="align-items:flex-start">${ic("info")}<div class="small muted">Todo lo que ves es un ejemplo. En el producto real, cada ficha fija su rentabilidad bruta y su plazo.</div></div></div>
-        </div>
+        <aside class="home-side">
+          <section class="panel w-gen"><div class="panel-h"><h2>Generado</h2><span class="xs muted">estimado</span></div>
+            <div class="w-big num pos">+${eur(acc + Math.max(earned, 0), true)}</div>
+            <div class="w-rows"><div><span>Ya cobrado</span><b class="num">${eur(Math.max(earned, 0), true)}</b></div><div><span>Pendiente (al vencimiento)</span><b class="num">${eur(acc, true)}</b></div></div>
+            ${spark()}<div class="xs muted">Evolución de tu saldo en Revibit</div>
+          </section>
+          <section class="panel"><div class="panel-h"><h2>Tus inversiones</h2><a class="lnk" href="#/app/cartera">Ver todo</a></div>
+            ${inv ? allocBar() + active().map((i) => { const p = P(i.pid); return `<button class="tx-row simple btnrow" data-act="open-project" data-id="${p.id}"><div class="tx-main"><span class="tx-ic photo">${photo(p, 0, 120, "")}</span><div class="tx-txt"><div class="t">${esc(p.name)}</div><div class="xs muted">${STATUS[p.status][0]}${p.works ? " · obra " + p.works + " %" : ""}</div></div></div><div class="tx-amt"><div class="num">${eur(i.amount)}</div><div class="xs pos num">+${eur(accrued(i), true)}</div></div></button>`; }).join("")
+                  : `<div class="empty">Aún no tienes inversiones activas.<br><a class="btn btn-brand btn-sm" style="margin-top:12px" href="#/app/proyectos">Explorar proyectos</a></div>`}
+          </section>
+          ${next ? `<section class="panel"><div class="panel-h"><h2>Próximo cobro</h2><span class="xs muted">previsto</span></div><div class="w-big num">${eur(next.i.amount + ret(next.i.amount, next.p).net, true)}</div><div class="small muted">${fdate(next.p.end)} · ${esc(next.p.name)} · neto</div></section>` : ""}
+          <section class="panel"><div class="panel-h"><h2>Para ti</h2><a class="lnk" href="#/app/proyectos">Ver todos</a></div>
+            ${open.slice(0, 3).map((p) => { const f = Math.round((raisedOf(p) / p.round) * 100); return `<button class="tx-row simple btnrow" data-act="open-project" data-id="${p.id}"><div class="tx-main"><span class="tx-ic photo">${photo(p, 0, 120, "")}</span><div class="tx-txt"><div class="t">${esc(p.name)}</div><div class="xs muted">${pct(p.rate)} anual · ${p.months} meses · ${f} % financiado</div></div></div></button>`; }).join("")}
+          </section>
+          <p class="xs muted side-legal">Datos y proyectos ficticios. En el producto real, cada ficha fija su rentabilidad bruta y su plazo.</p>
+        </aside>
       </div>`);
   }
   function allocBar() {
@@ -455,7 +503,7 @@
   // ---------- Proyectos ----------
   let filter = "all", sort = "recent";
   function viewProjects() {
-    const F = [["all", "Todos"], ["open", "Abiertos"], ["fav", "❤ Guardados"], ["funded", "En reforma"], ["done", "Completados"], ["soon", "Próximamente"], ["study", "En estudio"]];
+    const F = [["all", "Todos"], ["open", "Abiertos"], ["fav", "Guardados"], ["funded", "En reforma"], ["done", "Completados"], ["soon", "Próximamente"], ["study", "En estudio"]];
     let list = PROJECTS.filter((p) => filter === "all" || (filter === "fav" ? S.favs[p.id] : p.status === filter));
     const order = { open: 0, soon: 1, funded: 2, study: 3, done: 4 };
     list = list.slice().sort({
@@ -469,7 +517,7 @@
       <div class="filters" role="group" aria-label="Filtrar">${F.map(([k, t]) => `<button class="chip" data-act="filter" data-f="${k}" aria-pressed="${filter === k}">${t}</button>`).join("")}</div>
       <div class="toolbar"><span class="small muted">${list.length} proyecto${list.length === 1 ? "" : "s"}</span>
         <label class="small row" style="gap:6px">Ordenar <select data-act="sort" aria-label="Ordenar proyectos">${[["recent", "Relevancia"], ["rate", "Mayor rentabilidad"], ["short", "Menor plazo"], ["funded", "Más financiado"]].map(([k, t]) => `<option value="${k}" ${sort === k ? "selected" : ""}>${t}</option>`).join("")}</select></label></div>
-      <div class="proj-grid">${list.map((p) => projCard(p)).join("") || `<div class="empty">Nada por aquí. ${filter === "fav" ? "Guarda proyectos con el ❤." : ""}</div>`}</div>`);
+      <div class="proj-grid">${list.map((p) => projCard(p)).join("") || `<div class="empty">Nada por aquí. ${filter === "fav" ? "Guarda proyectos con el." : ""}</div>`}</div>`);
   }
 
   // ---------- Ficha de proyecto ----------
@@ -534,14 +582,14 @@
         <div class="kv"><span>Tipo de cobro</span><strong>Al vencimiento (pago único)</strong></div>
         <div class="kv"><span>Fiscalidad</span><strong>Retención del ${RETENCION * 100} % sobre los rendimientos</strong></div>
         <div class="kv"><span>Registro</span><strong>Por decidir (tokenización en estudio)</strong></div></div>`;
-    if (tab === "docs") pane = `<div class="card">${["Ficha del proyecto", "Hoja de datos clave de la inversión", "Acuerdo de suscripción", "Nota simple del Registro", "Informe de tasación", "Presupuesto de obra", "Escrituras de la sociedad del proyecto"].map((x) => `<button class="list-item" style="width:100%;background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;text-align:left" data-act="toast" data-msg="📄 Documento de ejemplo: en la versión real se descarga el PDF"><div class="av">${ic("doc", 20)}</div><div class="grow"><div class="t">${x}</div><div class="xs muted">PDF · ejemplo</div></div>${ic("down", 18)}</button>`).join("")}</div>`;
+    if (tab === "docs") pane = `<div class="card">${["Ficha del proyecto", "Hoja de datos clave de la inversión", "Acuerdo de suscripción", "Nota simple del Registro", "Informe de tasación", "Presupuesto de obra", "Escrituras de la sociedad del proyecto"].map((x) => `<button class="list-item" style="width:100%;background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;text-align:left" data-act="toast" data-msg="Documento de ejemplo: en la versión real se descarga el PDF"><div class="av">${ic("doc", 20)}</div><div class="grow"><div class="t">${x}</div><div class="xs muted">PDF · ejemplo</div></div>${ic("down", 18)}</button>`).join("")}</div>`;
 
     let cta = "";
     if (p.status === "open") cta = `<div class="sim"><label class="small" for="sim">Si inviertes <strong id="sim-v">${eur(simAmt)}</strong></label><input id="sim" type="range" min="500" max="${Math.min(10000, left)}" step="100" value="${Math.min(simAmt, left)}" data-id="${p.id}">
         <div class="kv"><span>Recibirías (neto)</span><strong class="pos num" id="sim-r">${eur(Math.min(simAmt, left) + ret(Math.min(simAmt, left), p).net, true)}</strong></div></div>
         <button class="btn btn-brand btn-block" data-act="invest" data-id="${p.id}" style="margin-top:10px">Invertir</button>`;
-    else if (p.status === "soon") cta = S.waitlist[p.id] ? `<button class="btn btn-ghost btn-block" data-act="waitlist" data-id="${p.id}">${ic("check", 18)} Te avisaremos</button>` : `<button class="btn btn-primary btn-block" data-act="waitlist" data-id="${p.id}">Avísame cuando abra 🔔</button>`;
-    else if (p.status === "funded") cta = `<div class="notice">Ronda completa 🎉 ${mine ? "Tienes " + eur(mine) + " aquí." : ""}</div>`;
+    else if (p.status === "soon") cta = S.waitlist[p.id] ? `<button class="btn btn-ghost btn-block" data-act="waitlist" data-id="${p.id}">${ic("check", 18)} Te avisaremos</button>` : `<button class="btn btn-primary btn-block" data-act="waitlist" data-id="${p.id}">Avísame cuando abra</button>`;
+    else if (p.status === "funded") cta = `<div class="notice">Ronda completa. ${mine ? "Tienes " + eur(mine) + " aquí." : ""}</div>`;
     else if (p.status === "done") cta = `<div class="notice">Proyecto completado y pagado el ${fdate(p.paidOn)}. ${mine ? "Participaste con " + eur(mine) + "." : ""}</div>`;
     else cta = `<div class="notice">En estudio. Las cifras son orientativas.</div>`;
 
@@ -602,13 +650,14 @@
     };
     if (ctab === "activas") pane = active().length ? active().map(posCard).join("") : `<div class="card empty">Sin inversiones activas.<br><a class="btn btn-brand btn-sm" style="margin-top:12px" href="#/app/proyectos">Explorar proyectos</a></div>`;
     if (ctab === "cerradas") { const c = S.investments.filter((i) => i.status === "repaid"); pane = c.length ? c.map(posCard).join("") : `<div class="card empty">Aún no se ha completado ninguno de tus proyectos.</div>`; }
-    if (ctab === "movimientos") pane = `<div class="card">${S.movements.length ? [...S.movements].sort((a, b) => new Date(b.date) - new Date(a.date)).map((m) => `<div class="list-item"><div class="av">${ic(m.amount >= 0 ? "down" : "up", 20)}</div><div class="grow"><div class="t">${esc(m.label)}</div><div class="xs muted">${fdate(m.date)}</div></div><div class="amt num ${m.amount >= 0 ? "pos" : ""}">${m.amount >= 0 ? "+" : ""}${eur(m.amount, true)}</div></div>`).join("") : `<div class="empty">Sin movimientos.</div>`}</div>`;
-    if (ctab === "docs") pane = `<div class="card">${["Contratos de inversión", "Certificado fiscal 2025 (para la Renta)", "Extracto de movimientos"].map((d) => `<button class="list-item" style="width:100%;background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;text-align:left" data-act="toast" data-msg="📄 Documento de ejemplo"><div class="av">${ic("doc", 20)}</div><div class="grow"><div class="t">${d}</div></div>${ic("down", 18)}</button>`).join("")}</div>`;
+    if (ctab === "movimientos") pane = `<section class="panel tx"><div class="tx-head d-only"><span>Movimiento</span><span>Fecha</span><span>Estado</span><span>Importe</span></div>${S.movements.length ? [...S.movements].sort((a, b) => new Date(b.date) - new Date(a.date)).map(txRow).join("") : `<div class="empty">Sin movimientos.</div>`}</section>`;
+    if (ctab === "docs") pane = `<div class="card">${["Contratos de inversión", "Certificado fiscal 2025 (para la Renta)", "Extracto de movimientos"].map((d) => `<button class="list-item" style="width:100%;background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;text-align:left" data-act="toast" data-msg="Documento de ejemplo"><div class="av">${ic("doc", 20)}</div><div class="grow"><div class="t">${d}</div></div>${ic("down", 18)}</button>`).join("")}</div>`;
     return shell("cartera", `${kycBanner()}
-      <div class="page-head"><h1 class="h2">Cartera</h1></div>
-      <section class="balance-hero"><div class="label small">Disponible</div><div class="amount num">${eur(S.cash, true).replace(/,(\d\d)/, "<small>,$1</small>")}</div>
-        <div class="small">Invertido: ${eur(inv)}${acc ? " · generado: +" + eur(acc, true) : ""}</div>
-        <div class="quick"><button data-act="add-funds"><span class="qi">${ic("plus")}</span>Añadir</button><button data-act="withdraw"><span class="qi">${ic("up")}</span>Retirar</button></div></section>
+      <section class="bal" aria-label="Saldo disponible">
+        <div class="bal-l"><div class="xs muted" style="margin-bottom:4px">Cartera · disponible</div><div class="bal-amt num">${eur(S.cash, true).replace(/\s?€/, "").replace(/,(\d\d)$/, "<small>,$1</small>")} €</div>
+          <div class="bal-sub">Invertido ${eur(inv)}${acc ? " · generado +" + eur(acc, true) + " (estimado)" : ""}</div></div>
+        <div class="bal-actions"><button class="pa" data-act="add-funds"><span class="pi">${ic("plus", 18)}</span><span>Añadir</span></button><button class="pa" data-act="withdraw"><span class="pi">${ic("up", 18)}</span><span>Retirar</span></button><button class="pa" data-act="ctab" data-t="docs"><span class="pi">${ic("doc", 18)}</span><span>Documentos</span></button></div>
+      </section>
       <div class="tabs" role="tablist" style="margin-top:16px">${T.map(([k, t]) => `<button role="tab" aria-selected="${ctab === k}" data-act="ctab" data-t="${k}">${t}</button>`).join("")}</div>
       ${pane}`);
   }
@@ -621,7 +670,7 @@
       <div class="page-head"><h1 class="h2">Perfil</h1></div>
       <div class="card row"><div style="width:56px;height:56px;border-radius:999px;background:var(--hero-grad);color:#fff;display:grid;place-items:center;font-weight:700;font-size:22px">${esc((u.name || u.email || "?")[0].toUpperCase())}</div><div><div class="h3">${esc(u.name || "Sin nombre")}</div><div class="small muted">${esc(u.email)}</div></div></div>
       <div class="card"><div class="h3" style="margin-bottom:6px">Tu cuenta</div>
-        <div class="kv"><span>Identidad</span><strong>${u.kyc === "done" ? '<span class="pill pill-brand">Verificada ✓</span>' : '<a href="#/alta/2">Verificar</a>'}</strong></div>
+        <div class="kv"><span>Identidad</span><strong>${u.kyc === "done" ? '<span class="pill pill-brand">Verificada</span>' : '<a href="#/alta/2">Verificar</a>'}</strong></div>
         <div class="kv"><span>Test de conocimientos</span><strong>${u.test === "ok" ? "Superado" : u.test === "warn" ? '<span class="pill pill-warn">Con avisos</span>' : '<a href="#/alta/3">Hacer</a>'}</strong></div>
         <div class="kv"><span>Puedes asumir pérdidas de hasta</span><strong>${lossCap() != null ? eur(lossCap()) : '<a href="#/alta/4">Calcular</a>'}</strong></div>
         <div class="kv"><span>Te avisamos si inviertes más de</span><strong>${eur(warnLimit())} por proyecto</strong></div>
@@ -688,7 +737,7 @@
       </form>`);
   }
   function successSheet(p, a) {
-    sheet("¡Hecho! 🎉", `<div class="stepper"><span class="on"></span><span class="on"></span><span class="on"></span></div>
+    sheet("¡Hecho!", `<div class="stepper"><span class="on"></span><span class="on"></span><span class="on"></span></div>
       <div class="success-ico">${ic("check", 38)}</div><p style="text-align:center;font-size:18px">Ya formas parte de <strong>${esc(p.name)}</strong></p>
       <p class="small muted" style="text-align:center">${eur(a)} · ${a / UNIDAD} participaciones. Te avisaremos de cada avance de la obra.</p>
       <a class="btn btn-primary btn-block" href="#/app/cartera" data-act="close-nav">Ver mi cartera</a>`);
@@ -750,14 +799,15 @@
     if (act === "close-bg" && e.target !== el) return;
     if (act === "fav") e.stopPropagation();
     switch (act) {
-      case "demo": demoUser(); location.hash = "#/app"; toast("¡Bienvenida, Ana! 👋 (cuenta demo)"); break;
+      case "demo": demoUser(); location.hash = "#/app"; toast("¡Bienvenida, Ana! (cuenta demo)"); break;
       case "go": location.hash = el.dataset.to; break;
       case "toast": toast(el.dataset.msg); break;
       case "open-project": closeSheet(); location.hash = S.user ? "#/app/proyectos/" + id : "#/entrar"; break;
-      case "fav": S.favs[id] = !S.favs[id]; save(); render(); toast(S.favs[id] ? "Guardado ❤" : "Quitado de guardados"); break;
+      case "fav": S.favs[id] = !S.favs[id]; save(); render(); toast(S.favs[id] ? "Guardado" : "Quitado de guardados"); break;
       case "filter": filter = el.dataset.f; render(); break;
       case "tab": tab = el.dataset.t; render(); break;
       case "ctab": ctab = el.dataset.t; render(); break;
+      case "see-moves": ctab = "movimientos"; if (location.hash === "#/app/cartera") render(); else location.hash = "#/app/cartera"; break;
       case "notifs": notifSheet(); break;
       case "invest": investSheet(P(id)); break;
       case "preset": $("#amt").value = el.dataset.v; $("#amt").dispatchEvent(new Event("input", { bubbles: true })); break;
@@ -768,11 +818,11 @@
         S.cash += a; move("in", "Dinero añadido (simulado)", a); save();
         const back = el.dataset.back;
         if (back) { const [pid, amt] = back.split("|"); render(); reviewSheet(P(pid), parseInt(amt, 10)); } else { closeSheet(); render(); }
-        toast(`+${eur(a)} añadidos 💸`); break;
+        toast(`+${eur(a)} añadidos`); break;
       }
       case "withdraw": if (S.cash < 1) { toast("No tienes saldo disponible"); break; } withdrawSheet(); break;
       case "withdraw-ok": { const a = readAmt(); if (a <= 0 || a > S.cash) { toast("Importe no válido"); break; } S.cash -= a; move("out", "Retirada a tu banco (simulada)", -a); save(); closeSheet(); render(); toast(`${eur(a)} en camino a tu banco`); break; }
-      case "waitlist": S.waitlist[id] = !S.waitlist[id]; save(); render(); toast(S.waitlist[id] ? "Te avisamos en cuanto abra 🔔" : "Aviso cancelado"); break;
+      case "waitlist": S.waitlist[id] = !S.waitlist[id]; save(); render(); toast(S.waitlist[id] ? "Te avisamos en cuanto abra" : "Aviso cancelado"); break;
       case "registry": registrySheet(S.investments.find((i) => i.id === id)); break;
       case "cancel": {
         const inv = S.investments.find((i) => i.id === id); if (!inv) break;
@@ -804,7 +854,7 @@
     const f = e.target.closest("[data-form]"); if (!f) return; e.preventDefault();
     const d = Object.fromEntries(new FormData(f));
     switch (f.dataset.form) {
-      case "interest": S.interest.push({ ...d, date: today() }); save(); f.reset(); toast("¡Gracias! Te escribimos pronto 👋"); break;
+      case "interest": S.interest.push({ ...d, date: today() }); save(); f.reset(); toast("¡Gracias! Te escribimos pronto"); break;
       case "signup": S = Object.assign(fresh(), { prefs: S.prefs }); S.user = { email: d.email, name: "", kyc: "none", test: null, nw: null, since: today() }; save(); location.hash = "#/alta/1"; break;
       case "ob1": S.user.name = d.name.trim(); S.user.country = d.country; save(); location.hash = "#/alta/2"; break;
       case "ob3": S.user.test = d.q1 === "a" && d.q2 === "b" && d.q3 === "a" ? "ok" : "warn"; save(); location.hash = "#/alta/4"; break;
