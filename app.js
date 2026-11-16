@@ -495,9 +495,10 @@
   }
   function allocBar() {
     const by = {}; active().forEach((i) => (by[i.pid] = (by[i.pid] || 0) + i.amount));
-    const parts = Object.entries(by).map(([pid, a]) => ({ p: P(pid), a }));
-    return `<div class="alloc" aria-hidden="true">${parts.map((x) => `<span style="flex:${x.a};background:hsl(${x.p.hue} 60% 50%)"></span>`).join("")}<span style="flex:${Math.max(S.cash, 0.0001)};background:var(--surface-2)"></span></div>
-      <div class="legend">${parts.map((x) => `<span><i style="background:hsl(${x.p.hue} 60% 50%)"></i>${esc(x.p.name)}</span>`).join("")}<span><i style="background:var(--surface-2);border:1px solid var(--border)"></i>Disponible</span></div><div class="divider" style="margin-bottom:4px"></div>`;
+    const BR = ["#00ffb3", "#00b383", "#7fe9cf", "#0e7a5c"];
+    const parts = Object.entries(by).map(([pid, a], k) => ({ p: P(pid), a, c: BR[k % BR.length] }));
+    return `<div class="alloc" aria-hidden="true">${parts.map((x) => `<span style="flex:${x.a};background:${x.c}"></span>`).join("")}<span style="flex:${Math.max(S.cash, 0.0001)};background:var(--surface-2)"></span></div>
+      <div class="legend">${parts.map((x) => `<span><i style="background:${x.c}"></i>${esc(x.p.name)}</span>`).join("")}<span><i style="background:var(--surface-2);border:1px solid var(--border)"></i>Disponible</span></div><div class="divider" style="margin-bottom:4px"></div>`;
   }
 
   // ---------- Proyectos ----------
