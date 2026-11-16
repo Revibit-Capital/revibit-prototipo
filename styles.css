@@ -536,3 +536,6 @@ html.native .topbar { top: calc(env(safe-area-inset-top) + 24px); }
   .topbar .search { display: none !important; }
   .topbar .top-logo { display: block !important; }
 }
+/* Sin buscador: acciones a la derecha en ordenador */
+.topbar { justify-content: flex-end; }
+@media (max-width: 760px) { .topbar, html.native .topbar { justify-content: space-between; } }

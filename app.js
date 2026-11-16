@@ -405,7 +405,6 @@
       <div class="main-wrap"><header class="topbar">
         <a class="avatar m-only" href="#/app/perfil" aria-label="Perfil">${ini}</a>
         <a class="top-logo m-only" href="#/app" aria-label="Revibit, inicio">Revibit<b>.</b></a>
-        <button class="search" data-act="go" data-to="#/app/proyectos" aria-label="Buscar proyectos">${ic("search", 18)}<span>Buscar proyectos</span><kbd class="d-only">⌘ K</kbd></button>
         <div class="top-actions"><button class="icon-btn" data-act="notifs" aria-label="Notificaciones">${ic("bell", 19)}${unread ? '<span class="badge-dot"></span>' : ""}</button><a class="avatar d-only" href="#/app/perfil" aria-label="Perfil">${ini}</a></div>
       </header>
       <main class="main" id="main">${content}</main></div><nav class="tabbar" aria-label="App">${items("")}</nav></div>`;
